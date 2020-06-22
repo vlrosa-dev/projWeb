@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Arquivos Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Arquivos Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Arquivos CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/create-service.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+ 
+    <title>Victor Rosa</title>
+
+</head>
+<body>
+    <div id="page-create-point">
+        <header>
+            <figure>
+                <img src="assets/logo-home.png" alt="Logomarca">
+            </figure>
+            <a href="index.html">
+                <span></span>
+                Voltar para home
+            </a>
+        </header>
+        
+        <form action="php/cad-service.php" method="POST">
+
+            <h1>Cadastro de serviço</h1>
+
+            <fieldset>
+                <legend>
+                    <h6>Preencha os dados abaixo</h6>
+                </legend>
+
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-dados-pessoais-tab" data-toggle="tab" href="#nav-dados-pessoais" role="tab" aria-controls="nav-dados-pessoais" aria-selected="true">Dados Pessoais</a>
+                        <a class="nav-item nav-link" id="nav-endereco-tab" data-toggle="tab" href="#nav-endereco" role="tab" aria-controls="nav-location" aria-selected="false">Endereço</a>
+                        <a class="nav-item nav-link" id="nav-servico-tab" data-toggle="tab" href="#nav-servico" role="tab" aria-controls="nav-service" aria-selected="false">Serviço</a>
+                    </div>
+                </nav>
+                
+                <div class="tab-content" id="nav-tabContent">
+
+                    <!-- Dados Pessoais -->
+                    <div class="tab-pane fade show active" id="nav-dados-pessoais" role="tabpanel" aria-labelledby="nav-dados-pessoais-tab">
+                        <div class="progress">
+                            <div id="progress" class="progress-bar progress-bar-striped" role="progressbar" style="width: 33.33%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="" name="name">
+                        </div>
+                        <div class="field">
+                            <label for="name">E-mail:</label>
+                            <input type="text" id="" name="email">
+                        </div>
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="address">CPF:</label>
+                                <input type="text" name="cpf">
+                            </div>
+                            <div class="field">
+                                <label for="sexo">Sexo:</label>
+                                <select name="sexo">
+                                    <option value="">Selecione o sexo:</option>
+                                    <option value="m">Masculino</option>
+                                    <option value="f">Feminino</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="telefone">Telefone:</label>
+                                <input type="text" name="telefone">
+                            </div>
+                            <div class="field">
+                                <label for="celular">Celular:</label>
+                                <input type="text" name="celular">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Endereço -->
+                    <div class="tab-pane fade show" id="nav-endereco" role="tabpanel" aria-labelledby="nav-endereco-tab">
+                        <div class="progress">
+                            <div id="progress" class="progress-bar progress-bar-striped" role="progressbar" style="width: 66.66%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="address">CEP:</label>
+                                <input type="text" name="cep">
+                            </div>
+                            <div class="field">
+                                <label for="numero">Numero</label>
+                                <input type="number" name="numero">
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="telefone">Estado</label>
+                                <input type="text" name="estado">
+                            </div>
+                            <div class="field">
+                                <label for="celular">Cidade</label>
+                                <input type="text" name="cidade">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="numero">Endereço</label>
+                            <input type="text" name="endereco">
+                        </div>
+                        <div class="field">
+                            <label for="numero">Complemento</label>
+                            <input type="text" name="complemento">
+                        </div>
+                    </div>
+                    
+                    <!-- Serviço -->
+                    <div class="tab-pane fade show" id="nav-servico" role="tabpanel" aria-labelledby="nav-servico-tab">
+                        <div class="progress">
+                            <div id="progress" class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                        </div>
+                        <div class="field">
+                            <label for="nomeServico">Nome do Serviço:</label>
+                            <input type="text" name="nomeServico">
+                        </div> 
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="tipoServico">Tipo de Serviço:</label>
+                                <input type="text" name="tipoServico">
+                            </div>
+                            <div class="field">
+                                <label for="exp">Tempo de Experiencia:</label>
+                                <input type="text" name="exp">
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="categoria">Categoria:</label>
+                                <select name="categoria" id="">
+                                    <option value="">Escolha uma opção</option>
+                                    <option value="ti">Tecnologia</option>
+                                    <option value="Obras">Obras</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="disponibilidade">Disponibilidade:</label>
+                                <select name="disponibilidade">
+                                    <option value="">Escolha uma opção</option>
+                                    <option value="diasUteis">Dias Uteis</option>
+                                    <option value="diario">Diario</option>
+                                    <option value="finaisSemana">Fim de Semana</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="nomeServico">Descrição do serviço prestado:</label>
+                            <textarea name="descricao" id="" cols="30" rows="5"></textarea>
+                        </div> 
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+            <button type="submit">Cadastrar serviço</button>
+
+        </form>
+
+    </div>
+
+    <!-- Arquivos JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/create-point.js"></script>
+
+</body>
+</html>
